@@ -40,7 +40,8 @@ body * {
 }
 #container {
   padding: 0px 24px;
-  width: 360px; /*largura que pegamos no figma*/
+  width: 100%; /*largura que pegamos no figma, depois alterado para 100%*/
+  max-width: 588px; /*Adicionado para pode se ajustar os diversos dispositivos*/
   border: solid red;
   margin: auto; /*aplica uma margem igual no esquerda e direita iguais*/
 }
