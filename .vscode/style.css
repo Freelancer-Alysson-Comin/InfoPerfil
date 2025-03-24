@@ -132,7 +132,6 @@ ul li a:hover {
 }
 
 #social-links {
-  border: 1px solid orchid;
   display: flex;
   padding: 24px 0px;
   font-size: 40px;
