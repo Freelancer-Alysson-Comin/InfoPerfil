@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Primeira caixa criada, a principal da página-->
+    <div id="container">
+      <!-- Segunda caixa usada no profile-->
+      <div id="profile">
+        <img src="./assets/avatar.png" alt="Foto de Perfil" />
+        <p>@maykbbrito</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <!-- Criando a lista de botões/opções <ul> é lista não ordenada e <li> são os itens da lista <a> link-->
+      <ul>
+        <li>
+          <a href="#"> Inscriver-se no NLW </a>
+        </li>
+        <li>
+          <a href="#"> Baixar e-book </a>
+        </li>
+        <li>
+          <a href="#"> Ver Portifólio </a>
+        </li>
+        <li>
+          <a href="https://rocketseat.com.br" target="_blank">
+            Conheça o Explorer</a
+          >
+          <!-- blank faz que o link seja aberto eu outra página-->
+        </li>
+      </ul>
+      <!--Lins das Redes Sociais-->
+      <div id="social-links">
+        <a href="https://github.com/alissoncomin" target="_blank"
+          ><ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/alysson_comin" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/@alissoncomin" target="_blank">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="https://br.linkedin.com/" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <footer>
+        Designer by
+        <a href="https://www.instagram.com/alysson_comin" target="_blank">
+          Alysson</a
+        >
+      </footer>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./scritp.js"></script>
+  </body>
+</html>

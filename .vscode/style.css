@@ -1,0 +1,150 @@
+* {
+  /*Reset da página completa, retirando todas as configurações padrões do navegador*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Isso faz com que o tamanho da caixa seja medido pela borda, assim conseguimos tamanho de caixa com padding (preenchimento interno)*/
+}
+/*Light mode, esse root permite criar variaveis e  usar essas propriedades em qualquer lugar da página*/
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.02);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.05);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.01);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg); /*Adiciona a imagem de fundo na página*/
+  /*background-repeat: no-repeat; /* Faz a imagem aparecer somente uma vez na tela*/
+  /*background-position: top center; /*Centraliza a imagem e deixa no topo da página*/
+  /*background-size: cover; /*Faz a imagem pegar toda a página, nesse caso o body inteiro*/
+
+  background: var(--bg-url) no-repeat top center/cover; /*Criamos uma propriedade para juntas todas as configurações acima*/
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+#container {
+  padding: 0px 24px;
+  width: 360px; /*largura que pegamos no figma*/
+  border: solid red;
+  margin: auto; /*aplica uma margem igual no esquerda e direita iguais*/
+}
+
+#profile {
+  text-align: center;
+  border: solid green;
+  padding: 24px;
+}
+#profile img {
+  width: 112px;
+  margin: auto;
+}
+
+#profile p {
+  font-weight: 500; /*Grossura da linha da letra "negrito*/
+  font-size: 16px; /* Padrão dos navegadores 16px*/
+  line-height: 24px; /*Altura da linha*/
+  margin-top: 8px;
+}
+
+/*swith*/
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+ul {
+  list-style: none; /*retira os pontinhos da frente da lista*/
+  border: solid purple;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0px;
+}
+ul li a {
+  border: 1px solid var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px; /*Arredodamento das bordas*/
+  backdrop-filter: blur(4px); /*Embaçar o componente*/
+  text-decoration: none; /*retira a linha abixo da palavra*/
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+/*pseudo-seletor é o que acontece quando é passado o mouse em cima do icone*/
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid white;
+}
+
+#social-links {
+  border: 1px solid orchid;
+  display: flex;
+  padding: 24px 0px;
+  font-size: 40px;
+  justify-content: center;
+}
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+footer {
+  padding: 24px;
+  text-align: center;
+}
